@@ -27,8 +27,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "client": "npm start",
+    "start": "concurrently \"npm run server\" \"react-scripts start\"",
+    "client": "react-scripts start",
     "server": "cd backend && nodemon server.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
