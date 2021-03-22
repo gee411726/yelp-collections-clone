@@ -26,7 +26,7 @@ export default class AddtoCollection extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://0.0.0.0:5000/collections/')
+    axios.get('/collections/')
       .then(response => {
         if (response.data.collectionsList.length > 0) {
           this.setState({
