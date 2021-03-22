@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/yelp-collections-clone/static/css/main.a96f5d65.chunk.css",
+    "main.js": "/yelp-collections-clone/static/js/main.112663b2.chunk.js",
+    "main.js.map": "/yelp-collections-clone/static/js/main.112663b2.chunk.js.map",
+    "runtime-main.js": "/yelp-collections-clone/static/js/runtime-main.77c6fe3a.js",
+    "runtime-main.js.map": "/yelp-collections-clone/static/js/runtime-main.77c6fe3a.js.map",
+    "static/css/2.1a02f21c.chunk.css": "/yelp-collections-clone/static/css/2.1a02f21c.chunk.css",
+    "static/js/2.6fbe9320.chunk.js": "/yelp-collections-clone/static/js/2.6fbe9320.chunk.js",
+    "static/js/2.6fbe9320.chunk.js.map": "/yelp-collections-clone/static/js/2.6fbe9320.chunk.js.map",
+    "index.html": "/yelp-collections-clone/index.html",
+    "static/css/2.1a02f21c.chunk.css.map": "/yelp-collections-clone/static/css/2.1a02f21c.chunk.css.map",
+    "static/css/main.a96f5d65.chunk.css.map": "/yelp-collections-clone/static/css/main.a96f5d65.chunk.css.map",
+    "static/js/2.6fbe9320.chunk.js.LICENSE.txt": "/yelp-collections-clone/static/js/2.6fbe9320.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.77c6fe3a.js",
+    "static/css/2.1a02f21c.chunk.css",
+    "static/js/2.6fbe9320.chunk.js",
+    "static/css/main.a96f5d65.chunk.css",
+    "static/js/main.112663b2.chunk.js"
+  ]
+}
