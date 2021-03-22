@@ -1,0 +1,53 @@
+@import url("../../styles/base.css");
+@import url("../../styles/colors.css");
+@import url("../../styles/queries.css");
+
+.flex {
+  display: flex;
+  margin: 0;
+
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -o-box-orient: horizontal;
+
+  flex-direction: column;
+
+  @media (--screen-phone-lg) {
+    flex-direction: row;
+  }
+}
+
+.header {
+  padding: 0 var(--padding);
+}
+.header .h2 {
+  /*font-size: 1.5em;*/
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.25);
+
+  padding: 0 var(--padding);
+}
+
+
+.details .photoStrip .img {
+  margin: 0 1px;
+}
+
+.details::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.closeDetail {
+  color: white;
+  display: fixed;
+  left: 0px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.25);
+}

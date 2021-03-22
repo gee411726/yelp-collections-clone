@@ -1,0 +1,46 @@
+@import url("../styles/colors.css");
+.container {
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    /*border-bottom: 1px solid #eeeeee; */
+    padding: 0px;
+    padding-top: 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.item h1 {
+    flex: 2;
+}
+
+.item h1:hover {
+    color: var(--highlight);
+}
+
+.item .rating {
+    text-align: right;
+    flex: 1;
+}
+
+.item :last-child {
+    border-bottom: none;
+}
+
+.item button {
+  height: 25px;
+  width: 40px;
+  font-size: 12px;
+  margin-left: 8px;
+  margin-top: 3px; 
+}
+
+.title {
+  padding-left: 16px;
+}
