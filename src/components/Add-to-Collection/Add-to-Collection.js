@@ -26,7 +26,7 @@ export default class AddtoCollection extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/collections/')
+    axios.get('http://0.0.0.0:5000/collections/')
       .then(response => {
         if (response.data.collectionsList.length > 0) {
           this.setState({
@@ -100,7 +100,7 @@ export default class AddtoCollection extends Component {
       comments: this.state.comments
     }
 
-    axios.post('http://localhost:5000/collections/place/add', place)
+    axios.post('http://0.0.0.0:5000/collections/place/add', place)
       .then(res => {
         console.log(res.data);
         alert("Place successfully added to collection!");

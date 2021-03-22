@@ -16,7 +16,7 @@ export default class ViewCollections extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/collections/')
+    axios.get('http://0.0.0.0:5000/collections/')
       .then(response => {
         this.setState({ 
           collections: response.data.collectionsList.filter(el => el.collectionName !== 'users'),
@@ -29,7 +29,7 @@ export default class ViewCollections extends Component {
 
   deletePlaceFromCollection(e) {
     /*
-    axios.delete('http://localhost:5000/collections/'+placeName)
+    axios.delete('http://0.0.0.0:5000/collections/'+placeName)
       .then(response => { console.log(response.data)});
 
     this.setState({

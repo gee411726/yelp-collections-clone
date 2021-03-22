@@ -128,7 +128,7 @@ export class Detail extends React.Component {
         collectionName: this.props.currentCollectionName,
         place_id: this.props.placeId
       }
-      axios.post('http://localhost:5000/collections/delete/place', request)
+      axios.post('http://0.0.0.0:5000/collections/delete/place', request)
       .then(res => console.log(res.data))
       .catch(err => console.log(err)); 
   

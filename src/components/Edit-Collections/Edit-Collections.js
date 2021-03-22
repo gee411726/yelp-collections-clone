@@ -15,7 +15,7 @@ export default class EditCollection extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/collections/')
+    axios.get('http://0.0.0.0:5000/collections/')
       .then(response => {
         if (response.data.collectionsList.length > 0) {
           this.setState({
@@ -44,7 +44,7 @@ export default class EditCollection extends Component {
         collectionName: this.state.collectionName
       }
   
-      axios.post('http://localhost:5000/collections/delete/collection', request)
+      axios.post('http://0.0.0.0:5000/collections/delete/collection', request)
         .then(res => {
           console.log(res.data);
           alert("Collection successfully deleted!");

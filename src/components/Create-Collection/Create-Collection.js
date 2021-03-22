@@ -15,7 +15,7 @@ export default class CreateCollection extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/collections/')
+    axios.get('http://0.0.0.0:5000/collections/')
       .then(response => {
         if (response.data.usersList.length > 0) {
           this.setState({
@@ -43,7 +43,7 @@ export default class CreateCollection extends Component {
       collectionName: this.state.collectionName,
     }
 
-    axios.post('http://localhost:5000/collections/add', collection)
+    axios.post('http://0.0.0.0:5000/collections/add', collection)
       .then(res => {
         console.log(res.data);
         alert("Collection successfully created!");

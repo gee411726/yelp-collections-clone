@@ -68,7 +68,7 @@ export default class Collection extends Component {
           collectionName: this.props.collectionName
       }
 
-      axios.post('http://localhost:5000/collections/collectionName/', collectionQuery)
+      axios.post('http://0.0.0.0:5000/collections/collectionName/', collectionQuery)
         .then(response => {
           this.setState({
               places: response.data
