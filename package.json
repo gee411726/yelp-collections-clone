@@ -27,13 +27,14 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "npm install && concurrently \"npm run server\" \"react-scripts start\"",
+    "start": "cd backend && node server.js",
     "client": "react-scripts start",
     "server": "cd backend && nodemon server.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "postinstall": "npm install concurrently \"npm run server\" \"react-scripts start\""
   },
   "eslintConfig": {
     "extends": [
