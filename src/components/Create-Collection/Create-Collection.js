@@ -18,7 +18,7 @@ export default class CreateCollection extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://${host}:${port}/api/collections/`)
+    axios.get(`https://gentle-tundra-70710.herokuapp.com/api/collections/`)
       .then(response => {
         if (response.data.usersList.length > 0) {
           this.setState({
@@ -46,7 +46,7 @@ export default class CreateCollection extends Component {
       collectionName: this.state.collectionName,
     }
 
-    axios.post(`https://${host}:${port}/api/collections/add`, collection)
+    axios.post(`https://gentle-tundra-70710.herokuapp.com/api/collections/add`, collection)
       .then(res => {
         console.log(res.data);
         alert("Collection successfully created!");

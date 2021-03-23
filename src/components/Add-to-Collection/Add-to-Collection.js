@@ -30,7 +30,7 @@ export default class AddtoCollection extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://${host}:${port}/api/collections/`)
+    axios.get(`hhttps://gentle-tundra-70710.herokuapp.com/api/collections/`)
       .then(response => {
         if (response.data.collectionsList.length > 0) {
           this.setState({
@@ -104,7 +104,7 @@ export default class AddtoCollection extends Component {
       comments: this.state.comments
     }
 
-    axios.post(`https://${host}:${port}/api/collections/place/add`, place)
+    axios.post(`https://gentle-tundra-70710.herokuapp.com/api/collections/place/add`, place)
       .then(res => {
         console.log(res.data);
         alert("Place successfully added to collection!");

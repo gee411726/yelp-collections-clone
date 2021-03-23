@@ -18,7 +18,7 @@ export default class EditCollection extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://${host}:${port}/api/collections/`)
+    axios.get(`https://gentle-tundra-70710.herokuapp.com/api/collections/`)
       .then(response => {
         if (response.data.collectionsList.length > 0) {
           this.setState({
@@ -47,7 +47,7 @@ export default class EditCollection extends Component {
         collectionName: this.state.collectionName
       }
   
-      axios.post(`https://${host}:${port}/api/collections/delete/collection`, request)
+      axios.post(`https://gentle-tundra-70710.herokuapp.com/api/collections/delete/collection`, request)
         .then(res => {
           console.log(res.data);
           alert("Collection successfully deleted!");

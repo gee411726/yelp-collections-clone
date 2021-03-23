@@ -132,7 +132,7 @@ export class Detail extends React.Component {
         collectionName: this.props.currentCollectionName,
         place_id: this.props.placeId
       }
-      axios.post(`https://${host}:${port}/api/collections/delete/place`, request)
+      axios.post(`https://gentle-tundra-70710.herokuapp.com/api/collections/delete/place`, request)
       .then(res => console.log(res.data))
       .catch(err => console.log(err)); 
   
