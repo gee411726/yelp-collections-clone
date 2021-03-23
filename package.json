@@ -33,8 +33,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "heroku-postbuild": "cd .. && npm install && npm run build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
