@@ -26,5 +26,6 @@ app.use('/collections', collectionsRouter);
 
 
 app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
+    console.log(`Server is running on port: ${port}`)
+    console.log(`host is: ${host}`);
 });
