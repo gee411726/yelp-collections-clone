@@ -16,7 +16,7 @@ export default class ViewCollections extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://${host}:${port}/api/collections/`)
+    axios.get(`https://gentle-tundra-70710.herokuapp.com/api/collections`)
       .then(response => {
         this.setState({ 
           collections: response.data.collectionsList.filter(el => el.collectionName !== 'users'),

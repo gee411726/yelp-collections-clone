@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-var host = process.env.host || '0.0.0.0';
-var port = process.env.port || '5000';
+var host = process.env.HOST || '0.0.0.0';
+var port = process.env.PORT || '5000';
 
 
 export default class AddtoCollection extends Component {
@@ -30,7 +30,7 @@ export default class AddtoCollection extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://${host}:${port}/api/collections/`)
+    axios.get(`https://${host}:${port}/api/collections/`)
       .then(response => {
         if (response.data.collectionsList.length > 0) {
           this.setState({
@@ -104,7 +104,7 @@ export default class AddtoCollection extends Component {
       comments: this.state.comments
     }
 
-    axios.post(`http://${host}:${port}/api/collections/place/add`, place)
+    axios.post(`https://${host}:${port}/api/collections/place/add`, place)
       .then(res => {
         console.log(res.data);
         alert("Place successfully added to collection!");
