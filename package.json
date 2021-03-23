@@ -27,15 +27,14 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start && npm run server",
+    "start": "npm run server",
     "client": "react-scripts start",
     "server": "cd backend && node server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
+    "predeploy": "npm install && npm run build",
     "deploy": "gh-pages -d build"
   },
-  "proxy":"http://localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",
