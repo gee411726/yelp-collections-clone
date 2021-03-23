@@ -30,7 +30,7 @@
     "start": "npm run server",
     "client": "react-scripts start",
     "server": "cd backend && node server.js",
-    "heroku-postbuild": "npm install && npm install && npm run build",
+    "heroku-postbuild": "npm install && npm run build",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "react-scripts build",
     "predeploy": "npm install && npm run build",
