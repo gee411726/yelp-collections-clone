@@ -24,19 +24,6 @@ const collectionsRouter = require('./routes/collections.js');
 app.use('/users', usersRouter); 
 app.use('/collections', collectionsRouter);
 
-
-// ... other imports 
-const path = require("path")
-
-// ... other app.use middleware 
-app.use(express.static(path.join(__dirname, "client", "build")))
-
-// ...
-// Right before your app.listen(), add this:
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../src/index.js"));
-});
-
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`)
     console.log(`Host is: ${host}`);
