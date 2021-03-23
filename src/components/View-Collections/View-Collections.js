@@ -19,7 +19,7 @@ export default class ViewCollections extends Component {
     axios.get(`https://gentle-tundra-70710.herokuapp.com/api/collections`)
       .then(response => {
         this.setState({ 
-          collections: response.data.collectionsList.filter(el => el.collectionName !== 'users'),
+          collections: response.data.collectionsList.sort().filter(el => el.collectionName !== 'users'),
         })
       })
       .catch((error) => {

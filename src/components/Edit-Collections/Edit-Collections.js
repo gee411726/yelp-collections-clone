@@ -22,7 +22,7 @@ export default class EditCollection extends Component {
       .then(response => {
         if (response.data.collectionsList.length > 0) {
           this.setState({
-              collections: response.data.collectionsList.map(collection => collection.name),
+              collections: response.data.collectionsList.sort().map(collection => collection.name),
               collectionName: response.data.collectionsList[0].name
         })
       }

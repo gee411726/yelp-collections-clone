@@ -145,9 +145,9 @@ export function createMarker(google, map, place, collectionsList) {
 export function searchDetails(place, collections) {
   function returnCorrectLocation(place) {
     if (place.geometry!== undefined) {
-      return <div>Location (Lat, Lng): ({place.geometry.location.lat()}, {place.geometry.location.lng()})</div>
+      return <div>Lat:{place.geometry.location.lat()}, Lng: {place.geometry.location.lng()}</div>
     } else if (place.location !== undefined) {
-      return <div>Location (Lat, Lng): ({place.location.lat}, {place.location.lng})</div>
+      return <div>Lat: {place.location.lat}, Lng: {place.location.lng}</div>
     }
   }
   function returnCorrectWebsite(place) {
@@ -162,7 +162,7 @@ export function searchDetails(place, collections) {
       {console.log("place info in search Details: ", place)}
       <div>Place Name: {place.name}</div>
       {returnCorrectWebsite(place)}<br/>
-      <div>Copy info below and paste in "Add to Place Collection" tab to add to your collection</div>
+      <div>Copy info below and paste information into "Add to Place Collection" tab to add place your collection</div>
       <div>Place_id: {place.place_id}</div>
       {returnCorrectLocation(place)}
     </div>

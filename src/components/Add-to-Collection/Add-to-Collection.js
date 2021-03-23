@@ -34,7 +34,7 @@ export default class AddtoCollection extends Component {
       .then(response => {
         if (response.data.collectionsList.length > 0) {
           this.setState({
-              collections: response.data.collectionsList.filter(el => el.name !== 'users').map(collection => collection.name)
+              collections: response.data.collectionsList.filter(el => el.name !== 'users').sort().map(collection => collection.name)
         });
           this.setState({
             collection: this.state.collections[0]

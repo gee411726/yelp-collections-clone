@@ -22,7 +22,7 @@ export default class CreateCollection extends Component {
       .then(response => {
         if (response.data.usersList.length > 0) {
           this.setState({
-              users: response.data.usersList.map(user => user.username),
+              users: response.data.usersList.sort().map(user => user.username),
               username: response.data.usersList[0].username
         })
       }
