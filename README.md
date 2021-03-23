@@ -6,6 +6,7 @@ The purpose was to learn the MERN stack by creating a rendition of Yelp Collecti
 ## Deployment
 The application is deployed via Heroku here: https://gentle-tundra-70710.herokuapp.com/
 <br/>
+<br/>
 ![Screenshot of the application](public/screenshot.png?raw=true "Screenshot of Yelp Collections Clone")
 <br />
 
@@ -13,9 +14,6 @@ The application is deployed via Heroku here: https://gentle-tundra-70710.herokua
 MongoDB Atlas Cloud Services <br/> 
 Google Places API <br />
 Google Maps API <br />
-
-
-
 <br />
 
 ## Bootstrapping
