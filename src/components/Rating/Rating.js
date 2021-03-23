@@ -3,6 +3,7 @@ import styles from './styles.module.css';
 
 const RatingIcon = (props) => (<span>★</span>)
 
+
 export class Rating extends React.Component {
   render() {
     const {percentage} = this.props;

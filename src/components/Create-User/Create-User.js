@@ -2,8 +2,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-var port = process.env.PORT || 5000;
-var host = process.env.HOST || '0.0.0.0';
 
 export default class CreateUser extends Component {
   constructor(props) {

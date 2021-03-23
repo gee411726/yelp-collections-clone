@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-var host = process.env.HOST || '0.0.0.0';
-var port = process.env.PORT || '5000';
-
-
 export default class AddtoCollection extends Component {
   constructor(props) {
     super(props);

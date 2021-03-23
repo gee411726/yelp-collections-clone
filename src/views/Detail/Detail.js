@@ -5,8 +5,8 @@ import styles from './styles.module.css'
 import axios from 'axios';
 
 
-var port = process.env.PORT || 5000;
-var host = process.env.HOST || '0.0.0.0';
+
+
 
 export class Detail extends React.Component {
 

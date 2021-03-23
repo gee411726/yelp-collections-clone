@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import MapsViewContainer from '../../views/Maps-View-Container/maps-view-container';
 
-var port = process.env.PORT || 5000;
-var host = process.env.HOST || '0.0.0.0';
 
 export default class ViewCollections extends Component {
   constructor(props) {
