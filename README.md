@@ -1,5 +1,6 @@
 # Yelp Collections Clone
-A project created using a Node.js backend (server for API, proxy, routing, and MongoDB Cloud interactions) with a REACT frontend.
+A project created using a Node.js backend (server for API, proxy, routing, and MongoDB Cloud interactions) with a REACT frontend. <br />
+<br/>
 The purpose was to learn the MERN stack by creating a rendition of Yelp Collections - an application that allows you to save groups of business pages for future reference. This application does something similar - saving custom groups of restaurants, bars, dessert places, museums, and any other sorts of collections of places for reference and sharing.
 <br />
 
