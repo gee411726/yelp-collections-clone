@@ -30,7 +30,7 @@ export default class AddtoCollection extends Component {
   }
 
   componentDidMount() {
-    axios.get(`hhttps://gentle-tundra-70710.herokuapp.com/api/collections/`)
+    axios.get(`https://gentle-tundra-70710.herokuapp.com/api/collections/`)
       .then(response => {
         if (response.data.collectionsList.length > 0) {
           this.setState({

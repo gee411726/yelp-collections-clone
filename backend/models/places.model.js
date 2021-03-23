@@ -12,7 +12,7 @@ const placeSchema = new Schema({
 
 const collectionSchema = new Schema({
   collectionName: { type: String, required: true },
-  createdBy: { type: String, required: true },
+  createdBy: { type: String, required: false },
   children: [placeSchema]
 }, {
   timestamps: true,

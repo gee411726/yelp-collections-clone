@@ -33,7 +33,8 @@ export default class CreateUser extends Component {
     console.log(user);
 
     axios.post(`https://gentle-tundra-70710.herokuapp.com/api/users/add`, user)
-      .then(res => console.log(res.data));
+      .then(res => console.log(res.data))
+      .then(res => alert("new user successfully created!"));
 
     this.setState({
       username: ''
