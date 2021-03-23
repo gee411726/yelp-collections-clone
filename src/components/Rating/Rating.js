@@ -1,4 +1,4 @@
-import React, { PropTypes as T } from 'react'
+import React from 'react'
 import styles from './styles.module.css';
 
 const RatingIcon = (props) => (<span>★</span>)

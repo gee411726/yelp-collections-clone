@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+var host = process.env.host || '0.0.0.0';
+var port = process.env.port || '5000';
+
+
 export default class AddtoCollection extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +30,7 @@ export default class AddtoCollection extends Component {
   }
 
   componentDidMount() {
-    axios.get('/collections/')
+    axios.get(`http://${host}:${port}/collections/`)
       .then(response => {
         if (response.data.collectionsList.length > 0) {
           this.setState({
@@ -100,7 +104,7 @@ export default class AddtoCollection extends Component {
       comments: this.state.comments
     }
 
-    axios.post('http://0.0.0.0:5000/collections/place/add', place)
+    axios.post(`http://${host}:${port}/collections/place/add`, place)
       .then(res => {
         console.log(res.data);
         alert("Place successfully added to collection!");

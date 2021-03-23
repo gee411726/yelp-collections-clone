@@ -18,7 +18,7 @@ export default class ViewCollections extends Component {
   }
 
   componentDidMount() {
-    axios.get(`${host}:${port}/collections/`)
+    axios.get(`http://${host}:${port}/collections/`)
       .then(response => {
         this.setState({ 
           collections: response.data.collectionsList.filter(el => el.collectionName !== 'users'),

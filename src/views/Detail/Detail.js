@@ -4,6 +4,10 @@ import { getDetails } from '../../utils/googleApiHelpers'
 import styles from './styles.module.css'
 import axios from 'axios';
 
+
+var port = process.env.PORT || 5000;
+var host = process.env.HOST || '0.0.0.0';
+
 export class Detail extends React.Component {
 
   constructor(props, context) {
@@ -128,7 +132,7 @@ export class Detail extends React.Component {
         collectionName: this.props.currentCollectionName,
         place_id: this.props.placeId
       }
-      axios.post('http://0.0.0.0:5000/collections/delete/place', request)
+      axios.post(`http://${host}:${port}/collections/delete/place`, request)
       .then(res => console.log(res.data))
       .catch(err => console.log(err)); 
   

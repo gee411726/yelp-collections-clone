@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+var port = process.env.PORT || 5000;
+var host = process.env.HOST || '0.0.0.0';
+
 export default class CreateCollection extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +18,7 @@ export default class CreateCollection extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://0.0.0.0:5000/collections/')
+    axios.get(`http://${host}:${port}/collections/`)
       .then(response => {
         if (response.data.usersList.length > 0) {
           this.setState({
@@ -43,7 +46,7 @@ export default class CreateCollection extends Component {
       collectionName: this.state.collectionName,
     }
 
-    axios.post('http://0.0.0.0:5000/collections/add', collection)
+    axios.post(`http://${host}:${port}/collections/add`, collection)
       .then(res => {
         console.log(res.data);
         alert("Collection successfully created!");

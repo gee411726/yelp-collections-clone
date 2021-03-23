@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+var port = process.env.PORT || 5000;
+var host = process.env.HOST || '0.0.0.0';
+
 export default class EditCollection extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +18,7 @@ export default class EditCollection extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://0.0.0.0:5000/collections/')
+    axios.get(`http://${host}:${port}/collections/`)
       .then(response => {
         if (response.data.collectionsList.length > 0) {
           this.setState({
@@ -44,7 +47,7 @@ export default class EditCollection extends Component {
         collectionName: this.state.collectionName
       }
   
-      axios.post('http://0.0.0.0:5000/collections/delete/collection', request)
+      axios.post(`http://${host}:${port}/collections/delete/collection`, request)
         .then(res => {
           console.log(res.data);
           alert("Collection successfully deleted!");

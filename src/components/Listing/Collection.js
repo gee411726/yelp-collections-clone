@@ -10,6 +10,9 @@ import styled from "styled-components";
 import * as RiIcons from "react-icons/ri"; 
 
 
+var port = process.env.PORT || 5000;
+var host = process.env.HOST || '0.0.0.0';
+
 const SidebarLink = styled(Link)` 
   display: flex; 
   color: #e1e9fc; 
@@ -68,7 +71,7 @@ export default class Collection extends Component {
           collectionName: this.props.collectionName
       }
 
-      axios.post('http://0.0.0.0:5000/collections/collectionName/', collectionQuery)
+      axios.post(`http://${host}:${port}/collections/collectionName/`, collectionQuery)
         .then(response => {
           this.setState({
               places: response.data
