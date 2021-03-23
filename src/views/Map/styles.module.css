@@ -90,3 +90,14 @@ body {
   height: 100px;
 
 }
+
+input {
+  width: 400px;
+  height: 32px;
+  font-size: 20px;
+}
+
+button {
+  height: 32px;
+  font-size: 16px;
+}

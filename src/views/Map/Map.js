@@ -36,7 +36,7 @@ export class MapComponent extends React.Component {
             id="pac-input"
             className="controls"
             type="text"
-            placeholder="Search Box"
+            placeholder="Search for places to add here"
           />
           <Detail 
           placeId={this.props.detailItem.place_id} 
