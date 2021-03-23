@@ -9,8 +9,6 @@ export default class ViewCollections extends Component {
   constructor(props) {
     super(props);
 
-    this.deletePlace = this.deletePlaceFromCollection.bind(this);
-
     this.state = {
       currentCollection: '',
       collections: []
@@ -18,7 +16,7 @@ export default class ViewCollections extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://${host}:${port}/collections/`)
+    axios.get(`http://${host}:${port}/api/collections/`)
       .then(response => {
         this.setState({ 
           collections: response.data.collectionsList.filter(el => el.collectionName !== 'users'),
@@ -28,18 +26,6 @@ export default class ViewCollections extends Component {
         console.log(error);
       })
     }
-
-  deletePlaceFromCollection(e) {
-    /*
-    axios.delete('http://0.0.0.0:5000/collections/'+placeName)
-      .then(response => { console.log(response.data)});
-
-    this.setState({
-      collections: this.state.collections.filter(el => el._placeName !== placeName)
-    })
-    */
-  }
-
 
   render() {
     return (

@@ -32,7 +32,7 @@ export default class CreateUser extends Component {
 
     console.log(user);
 
-    axios.post(`http://${host}:${port}/users/add`, user)
+    axios.post(`http://${host}:${port}/api/users/add`, user)
       .then(res => console.log(res.data));
 
     this.setState({

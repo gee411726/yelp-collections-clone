@@ -21,8 +21,20 @@ connection.once('open', () => {
 const usersRouter = require('./routes/users.js');
 const collectionsRouter = require('./routes/collections.js');
 
-app.use('/users', usersRouter); 
-app.use('/collections', collectionsRouter);
+app.use('/api/users', usersRouter); 
+app.use('/api/collections', collectionsRouter);
+
+
+// Heroku assigns NODE_ENV to production, serving production ready React app and re-routing client-side routes to index.html
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, 'client/build')));
+// Handle React routing, return all requests to React app
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}
+
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`)
