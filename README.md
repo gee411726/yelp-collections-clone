@@ -5,13 +5,19 @@ The purpose was to learn the MERN stack by creating a rendition of Yelp Collecti
 
 ## Deployment
 The application is deployed via Heroku here: https://gentle-tundra-70710.herokuapp.com/
-
 <br/>
+![Screenshot of the application](public/screenshot.png?raw=true "Screenshot of Yelp Collections Clone")
+<br />
+
 ## 3rd Party Services / APIs used: 
 MongoDB Atlas Cloud Services <br/> 
 Google Places API <br />
-Google Maps API
+Google Maps API <br />
+
+
 
 <br />
 ## Bootstrapping
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
