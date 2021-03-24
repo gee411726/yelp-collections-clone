@@ -28,7 +28,7 @@ export default class ViewCollections extends Component {
   render() {
     return (
       <div>
-        <div className="component-title">View Collections ------- Instructions: Search for a place, click on any marker(s) that pops up to get place info. Then copy place info and paste info into "Add Place to Collection" tab</div>
+        <div className="component-title">View Collections --- Search for a place, click on any marker(s) that pops up to get place info. Then copy place and paste info into "Add Place to Collection" page </div>
         <MapsViewContainer collections={this.state.collections}
                               />
       </div>

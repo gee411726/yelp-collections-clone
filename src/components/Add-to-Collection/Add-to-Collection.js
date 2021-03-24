@@ -120,7 +120,7 @@ export default class AddtoCollection extends Component {
 
     return (
     <div>
-      <div className="component-title">Add Place to Collection ------- Instructions: Get place_id, lat, and lng from clicking on a marker after searching for a place in the View Collections page</div>
+      <div className="component-title">Add Place to Collection --- Get place_id, lat, and lng from clicking on a marker after searching for a place in the View Collections page</div>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
           <label><b>Collection to Add to: </b></label>
