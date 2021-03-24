@@ -113,7 +113,6 @@ export function createMarker(google, map, place, collectionsList) {
       return
     }
     position = place.location;
-    console.log("Place.location", position)
   } else {
     position = place.geometry.location;
     console.log(place)

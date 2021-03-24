@@ -110,7 +110,7 @@ export default class Collection extends Component {
                 : iconClosed}
               </div>
             </SidebarLink>
-            { this.state.showPlaces && this.state.places.filter( place => 'name' in place).map( place => {
+            { this.state.showPlaces && this.state.places.filter( place => 'name' in place).sort((a,b) => (a.name > b.name) ? 1 : -1).map( place => {
                 return ( 
                   <DropdownLink>
                     <Item place={place}

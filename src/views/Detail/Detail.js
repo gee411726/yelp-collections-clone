@@ -96,7 +96,7 @@ export class Detail extends React.Component {
           </button>
           <div className={styles.body}>
             <h2>{place.name}</h2> 
-            <h2>Address: {place.formatted_address}</h2>
+            <h2>Address: <a href={this.props.DBPlace.url}></a>{place.formatted_address}</h2>
             <h2>Current Status: {place.business_status}</h2>
             <h2>Phone Number: {place.formatted_phone_number}</h2>
             <h2><u><a href={place.website}>Website</a></u></h2>

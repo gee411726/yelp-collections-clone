@@ -7,6 +7,7 @@ const placeSchema = new Schema({
   name: { type: String, required: true },
   location: {type: Object, required: false },
   rating: { type: Number, required: false },
+  url: {type: String, requied: false },
   comments: { type: String, required: false }
 })
 

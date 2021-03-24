@@ -17,7 +17,7 @@ export default class ViewCollections extends Component {
     axios.get(`https://gentle-tundra-70710.herokuapp.com/api/collections`)
       .then(response => {
         this.setState({ 
-          collections: response.data.collectionsList.sort().filter(el => el.collectionName !== 'users'),
+          collections: response.data.collectionsList.sort((a, b) => (a.name > b.name) ? 1 : -1).filter(el => el.name !== 'users'),
         })
       })
       .catch((error) => {
@@ -28,7 +28,7 @@ export default class ViewCollections extends Component {
   render() {
     return (
       <div>
-        <div className="component-title">View Collections ------- Instructions: Search for a place, click on any marker(s) that pops up to get place info to use to add place to collection</div>
+        <div className="component-title">View Collections ------- Instructions: Search for a place, click on any marker(s) that pops up to get place info. Then copy place info and paste info into "Add Place to Collection" tab</div>
         <MapsViewContainer collections={this.state.collections}
                               />
       </div>

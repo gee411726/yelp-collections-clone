@@ -2,3 +2,19 @@ table {
   display: flex;
 }
 
+input[type="text"] {
+  max-width: 20%;
+  overflow: auto
+}
+input[type="float"] {
+  max-width: 20%;
+  overflow: auto
+}
+input[type="submit"] {
+  max-width: 10%
+}
+
+label {
+  max-width: 20%;
+  overflow: auto
+}

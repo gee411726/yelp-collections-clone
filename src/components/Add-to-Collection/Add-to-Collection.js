@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../styles.module.css';
 
 export default class AddtoCollection extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ export default class AddtoCollection extends Component {
       .then(response => {
         if (response.data.collectionsList.length > 0) {
           this.setState({
-              collections: response.data.collectionsList.filter(el => el.name !== 'users').sort().map(collection => collection.name)
+              collections: response.data.collectionsList.filter(el => el.name !== "users").sort((a, b) => (a.name > b.name) ? 1 : -1).map(collection => collection.name)
         });
           this.setState({
             collection: this.state.collections[0]
@@ -123,20 +124,20 @@ export default class AddtoCollection extends Component {
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
           <label><b>Collection to Add to: </b></label>
-          <select ref="userInput"
-              required
-              className="form-control"
-              value={this.state.collection}
-              onChange={this.onChangeCollection}>
-              {
-                this.state.collections.map(function(collection) {
-                  return <option 
-                    key={collection}
-                    value={collection}>{collection.toProperCase()}
-                    </option>;
-                })
-              }
-          </select>
+            <select ref="userInput"
+                required
+                className="form-control"
+                value={this.state.collection}
+                onChange={this.onChangeCollection}>
+                {
+                  this.state.collections.map(function(collection) {
+                    return <option 
+                      key={collection}
+                      value={collection}>{collection.toProperCase()}
+                      </option>;
+                  })
+                }
+            </select>
         </div>
         <div className="form-group"> 
             <label>Place Id</label>
