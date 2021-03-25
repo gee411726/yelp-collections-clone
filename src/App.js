@@ -19,7 +19,6 @@ class App extends React.Component {
         <Route path="/" exact component={ViewCollections} />
         <Route path="/edit" component={EditCollections} />
         <Route path="/create" component={CreateCollection} />
-        <Route path="/user" component={CreateUser} />
         <Route path="/add" component={AddtoCollection} />
       </Router>
     );

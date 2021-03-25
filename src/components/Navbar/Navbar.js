@@ -23,9 +23,6 @@ export default class Navbar extends Component {
           <li className="navbar-item">
           <Link to="/edit" className="nav-link">Delete Collections</Link>
           </li>
-          <li className="navbar-item">
-          <Link to="/user" className="nav-link">Create User</Link>
-          </li>
         </ul>
         </div>
       </nav>
